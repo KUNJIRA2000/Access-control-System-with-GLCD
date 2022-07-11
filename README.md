@@ -1,4 +1,4 @@
-# Access-control-System-with-GLCD
+# Access-control-System-with-GLCD Part 1
 
 This is PART 1 of the group project for EEE20003 - Embedded Micro-controllers
 
