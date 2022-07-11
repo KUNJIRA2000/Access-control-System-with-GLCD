@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-ssd1306", "id": "oled1", "top": 250, "left": 130, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 280,
+      "left": 30,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 280,
+      "left": 310,
+      "attrs": { "color": "crimson" }
+    },
+    { "type": "wokwi-resistor", "id": "r1", "top": 340, "left": 318, "rotate": 180, "attrs": {} },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": 200, "left": 425, "attrs": {} },
+    { "type": "wokwi-ntc-temperature-sensor", "id": "ntc1", "top": 200, "left": -40, "attrs": {} }
+  ],
+  "connections": [
+    [ "mega:GND.2", "oled1:GND", "black", [ "v13.52", "h59.45" ] ],
+    [ "mega:5V", "oled1:VIN", "red", [ "v22.5", "h58.22" ] ],
+    [ "oled1:CLK", "mega:21", "green", [ "v-19.58", "h228.82", "v-252.44", "h-66.85" ] ],
+    [ "oled1:DATA", "mega:20", "green", [ "v-19.58", "h237.82", "v-252.44", "h-89.8" ] ],
+    [ "mega:GND.2", "btn1:2.r", "black", [ "v13.52", "h-62.28", "v120.73" ] ],
+    [ "mega:5V", "btn2:2.l", "red", [ "v22.5", "h134.05", "v109.76" ] ],
+    [ "mega:GND.2", "r1:2", "black", [ "v13.52", "h115.32", "v152.66" ] ],
+    [ "r1:1", "btn2:2.r", "black", [ "v-0.32", "h22.33", "v-36.92" ] ],
+    [ "mega:GND.2", "rtc1:GND", "black", [ "v13.52", "h243.04", "v17.96" ] ],
+    [ "mega:5V", "rtc1:5V", "red", [ "v22.5", "h245.81", "v17.96" ] ],
+    [ "rtc1:SDA", "mega:20", "green", [ "h-30.18", "v-244.02", "h-85.81" ] ],
+    [ "rtc1:SCL", "mega:21", "green", [ "h-30.18", "v-253.52", "h-104.77" ] ],
+    [ "mega:GND.2", "ntc1:GND", "black", [ "v13.52", "h-62.28", "v140.69" ] ],
+    [ "mega:5V", "ntc1:VCC", "red", [ "v22.5", "h-46.55", "v27.94" ] ],
+    [ "ntc1:OUT", "mega:A1", "green", [ "h30.93", "v-31.52", "h90.8" ] ],
+    [ "btn1:1.l", "mega:11", "green", [ "h-75.69", "v-298.52", "h573.73" ] ],
+    [ "btn2:1.r", "mega:19", "green", [ "v-0.1", "h29.16", "v-298.18", "h-108.6" ] ]
+  ]
+}
