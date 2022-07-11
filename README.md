@@ -3,6 +3,7 @@
 This is PART 1 of the group project for EEE20003 - Embedded Micro-controllers
 
 **Project Description **
+
 Capacitive sensors provide an alternative to the traditional mechanical buttons 
 and sliders in electronics. These sensors work by sensing a conductive object 
 nearby rather than detecting the physical state of the device. One of the 
